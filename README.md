@@ -14,7 +14,7 @@
 
 **[The idea](#-the-idea)** ·
 **[Results](#-results)** ·
-**[How it works](#-how-it-works)** ·
+**[How it works](#-How-it-works)** ·
 **[Skills](#-skills-demonstrated)** ·
 **[Run it](#-run-it-yourself)** ·
 **[Limitations](#-honest-limitations)**
