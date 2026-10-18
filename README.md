@@ -154,7 +154,7 @@ Climate-Risk-Financial-Model/
 
 ```bash
 # 1. Clone
-git clone https://github.com/<your-username>/Climate-Risk-Financial-Model.git
+git clone https://github.com/x-SV-x/Climate-Risk-Financial-Model.git
 cd Climate-Risk-Financial-Model
 
 # 2. Install the few libraries needed
