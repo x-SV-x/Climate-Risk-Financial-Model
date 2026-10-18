@@ -36,11 +36,6 @@ That sounds like exactly the right thing to do. This project asks a question tha
 
 My answer, tested with a computer simulation of 10,000 firms: they go to **shadow banks** (lightly regulated lenders called NBFCs) that charge much higher interest. Many of them then fail. The regulated banks look safer, but **the risk was moved, not removed.**
 
-<div align="center">
-  <img src="Images/Climate_Risk.png"
-       alt="Climate Risk Financial Model"
-       width="100%">
-</div>
 ---
 
 ## 📌 At a glance
@@ -50,21 +45,21 @@ My answer, tested with a computer simulation of 10,000 firms: they go to **shado
 | **Project** | *Simulating Climate Risk Migration: The Shadow Banking Spillover Effect* |
 | **Author** | Vaibhav Thakur, BS Economics, IISER Bhopal |
 | **Type** | Two-part project: (1) a review of climate risk in banking, (2) an original simulation study |
-| **Method** | Monte Carlo simulation of a synthetic economy (10,000 firms, fixed seed for exact reproducibility) |
 | **Tools** | Python, NumPy, pandas, Matplotlib, seaborn, kernel density estimation, Jupyter |
 | **Policy link** | Reserve Bank of India climate-risk framework, Basel Committee principles, NGFS and TCFD |
-| **Read the full write-up** | [`Vaibhav_Project_Report.pdf`](Vaibhav_Project_Report.pdf) |
-| **Run the code** | [`Vaibhav_Code.ipynb`](Vaibhav_Code.ipynb) (PDF copy: [`Vaibhav_Code.pdf`](Vaibhav_Code.pdf)) |
+| **Read the full write-up** | [`Project_Report.pdf`](Project_Report.pdf) and [`Presentation.pdf`](Presentation.pdf) |
+| **Run the code** | [`Simulation_Code.ipynb`](Simulation_Code.ipynb) (Code report: [`Simulation_Code_Report.pdf`](Simulation_Code_Report.pdf)) |
 
 ---
 
 ## 🔭 Results
 
-### The story in one picture
-
-<div align="center">
-<img src="assets/flow.svg" alt="Animated flow: 10,000 firms, flood shock, 5,896 stay with banks, 4,104 move to NBFCs, 4,013 default" width="100%"/>
-</div>
+- I simulated a synthetic economy of 10000 firms to test regulatory climate risk behavior.
+- After a simulated severe flood shock, traditional banks aggressively de-risked. They hiked interest rates by 50 basis points for highly vulnerable firms and outright rejected 4104 firms whose Interest Coverage Ratios dropped below 1.5.
+- While the traditional banking sector looked safer on paper, the macroeconomic risk did not disappear. It migrated.
+- Unregulated Shadow Banks (NBFCs) stepped in to absorb all 4104 rejected firms, but charged an exorbitant 400 basis point risk premium.
+- Because highly vulnerable firms were forced to take on extremely expensive shadow debt just to survive the shock, 4013 of them collapsed into default.
+- Conclusion: Traditional bank climate stress tests are fundamentally flawed if they ignore shadow banking. Pushing climate risk out of regulated banks actually increases total systemic defaults.
 
 ### What the simulation found
 
