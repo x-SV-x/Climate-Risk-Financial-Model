@@ -88,7 +88,7 @@ My answer, tested with a computer simulation of 10,000 firms: they go to **shado
 
 The simulation has **four phases**. Think of it as building a small artificial economy, hitting it with a flood, and watching what lenders and borrowers do.
 
-
+```mermaid
 flowchart LR
     A(["<b>PHASE 01</b><br/>Synthetic Economy<br/><br/>Generate 10,000<br/>synthetic firms"])
     B(["<b>PHASE 02</b><br/>Climate Shock<br/><br/>Flood exposure<br/>Bank repricing<br/>Credit rejection"])
@@ -110,6 +110,7 @@ flowchart LR
     class D phase4
 
     linkStyle default stroke:#64748B,stroke-width:2.5px
+```
 
 
 | Phase | What happens | Key choices |
