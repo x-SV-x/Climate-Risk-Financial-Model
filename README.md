@@ -15,7 +15,6 @@
 **[The idea](#-the-idea)** ·
 **[Results](#-results)** ·
 **[How it works](#-how-it-works)** ·
-**[The maths](#-the-maths-in-one-minute)** ·
 **[Skills](#-skills-demonstrated)** ·
 **[Run it](#-run-it-yourself)** ·
 **[Limitations](#-honest-limitations)**
@@ -92,7 +91,7 @@ The simulation has **four phases**. Think of it as building a small artificial e
 flowchart LR
     A(["<b>PHASE 01</b><br/>Synthetic Economy<br/><br/>Generate 10,000<br/>synthetic firms"])
     B(["<b>PHASE 02</b><br/>Climate Shock<br/><br/>Flood exposure<br/>Bank repricing<br/>Credit rejection"])
-    C(["<b>PHASE 03</b><br/>Shadow Banking<br/><br/>Rejected firms<br/>Shift to NBFCs<br/>Borrowing rate: 12.5%"])
+    C(["<b>PHASE 03</b><br/>Shadow Banking<br/><br/>Rejected firms<br/>Shift to NBFCs<br/>Climate interest premium"])
     D(["<b>PHASE 04</b><br/>Impact Assessment<br/><br/>Aggregate outcomes<br/>Measure spillovers<br/>Visualise results"])
 
     A --> B
@@ -128,13 +127,13 @@ flowchart LR
 
 | Area | What this project shows |
 |---|---|
-| **Quantitative modelling** | Designing a multi-stage agent-based model from scratch, deriving closed-form relations (coverage cancellation, approval cut-offs, survival window) and checking them against the simulation |
-| **Statistics** | Probability distributions, mixture models, clipping and truncation effects, Monte Carlo sampling error, kernel density estimation (bandwidth selection) |
-| **Python and data** | Vectorised NumPy and pandas on 10,000-row tables, reproducible seeded experiments, clean Matplotlib and seaborn charts |
+| **Quantitative modelling** | Designing a multistage simulation based model from scratch, deriving closed-form relations (coverage cancellation, approval cut-offs, survival window) and checking them against the simulation |
+| **Statistics** | Probability distributions, clipping and truncation effects, kernel density estimation (bandwidth selection) |
+| **Python and data** | NumPy and pandas on 10,000-row tables, reproducible seeded experiments, clean Matplotlib and seaborn charts |
 | **Financial risk** | Credit risk concepts (interest coverage, default, risk-based pricing, credit rationing), physical versus transition climate risk, capital and regulatory context (CET1, RWA, Basel, NGFS, TCFD) |
 | **Economics** | Spillovers, regulatory arbitrage, and why a micro-prudential fix can have a macro-level side effect |
 | **Research practice** | Literature-grounded hypothesis, explicit assumptions, calibration to central-bank data, and an honest limitations section |
-| **Communication** | A beginner-friendly review of climate risk in banking, a formal research write-up, and this README for non-specialists |
+| **Communication** | A beginner-friendly review of climate risk in banking, a formal research write-up, and this README |
 
 ---
 
@@ -143,21 +142,12 @@ flowchart LR
 ```
 Climate-Risk-Financial-Model/
 ├── README.md                    ← you are here
-├── Vaibhav_Project_Report.pdf   ← full report (review + simulation + discussion)
-├── Vaibhav_Code.ipynb           ← the simulation notebook (run this)
-├── Vaibhav_Code.pdf             ← the executed notebook, readable without Python
-└── assets/                      ← banner, animated diagrams and charts used in this README
+├── Project_Report.pdf           ← full report (review + simulation + discussion)
+├── Simulation_Code.ipynb        ← the simulation notebook (run this)
+├── Simulation_Code_Report.pdf   ← the executed notebook, readable without Python
+├── Presentation.pdf             ← presentation for this project
+└── assets/                      ← diagrams used in this README
 ```
-
-### Where to start
-
-| If you are… | Read this |
-|---|---|
-| **A recruiter or hiring manager** | The summary above, then the [Results](#-results) section (about 2 minutes) |
-| **A research advisor or economist** | The report's Section 3, then the [limitations](#-honest-limitations) below |
-| **A data or quant reader** | [`Vaibhav_Code.ipynb`](Vaibhav_Code.ipynb) and [The maths](#-the-maths-in-one-minute) |
-| **New to climate finance** | Section 2 of the report, which explains climate risk in banking from the ground up |
-
 ---
 
 ## 🚀 Run it yourself
@@ -171,14 +161,14 @@ cd Climate-Risk-Financial-Model
 pip install numpy pandas matplotlib seaborn scipy jupyter
 
 # 3. Open the notebook and choose Kernel > Restart & Run All
-jupyter notebook Vaibhav_Code.ipynb
+jupyter notebook Simulation_Code.ipynb
 ```
 
 The random seed is fixed at **101**, so you should get exactly the same 10,000 firms and the same numbers quoted above. Change the seed or any parameter (flood severity, the 1.5 cut-off, the 400 bp premium) to run your own experiment.
 
 ---
 
-## ⚠️ Honest limitations
+## 😇 Honest limitations
 
 A simulation is only as good as its assumptions, so these are stated openly.
 
@@ -186,41 +176,15 @@ A simulation is only as good as its assumptions, so these are stated openly.
 - **Many rejected firms were already weak.** About 90% of the rejected firms were already below the 1.5 coverage line before the flood, so the flood mainly tips borderline firms over the edge.
 - **The result depends on two parameters.** The 1.5 approval cut-off and the 400 bp NBFC premium drive the size of the 97.8% figure. The *direction* of the result is robust, but the exact percentage is not a universal number.
 - **"Default" means interest-coverage distress.** It is not a model of legal bankruptcy, restructuring or fresh capital.
-- **One run, no feedback.** Results come from a single seeded run, and banks and NBFCs do not react to each other's losses.
-- **Independence assumed.** Flood vulnerability and leverage are drawn independently.
-
-### Natural extensions
-
-- Sensitivity analysis over the cut-off, the premium and the flood severity
-- Many seeds, with confidence intervals around every headline number
-- Correlating flood exposure with sector and leverage
-- A feedback loop in which NBFC losses spill back to banks that fund them
-- Calibration to firm-level data rather than aggregate debt shares
 
 ---
 
-## 📚 References
-
-- Das, A., Majilla, T., & Saurav, S. *Natural Disasters, Interest Rate Dynamics, and Economic Activities.* CAFRAL.
-- Mathur, S., & Sarma, R. *Who Lends When It Floods? Banks vs Non-Banks.* CAFRAL.
-- Reserve Bank of India (2023). Report, 28 December 2023; and Draft Framework on Climate Risk and Sustainable Finance.
-- Basel Committee on Banking Supervision (2022). *Principles for the Effective Management and Supervision of Climate-Related Financial Risks.*
-- Network for Greening the Financial System (2023). *NGFS Climate Scenarios.*
-- Task Force on Climate-related Financial Disclosures (2017). *Final Report.*
-
-The full bibliography is in the report.
-
----
-
-<div align="center">
-
-## 👋 About the author
+## 👋 About me
 
 **Vaibhav Thakur** · BS Economics, IISER Bhopal
 
-Interested in climate finance, financial stability, quantitative modelling and empirical economics.
+Interested in quantitative modelling and economics (empirics and theory).
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR-LINKEDIN)
 [![Email](https://img.shields.io/badge/Email-Get%20in%20touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR-EMAIL)
 [![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR-USERNAME)
 
