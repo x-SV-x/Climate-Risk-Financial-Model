@@ -181,7 +181,7 @@ A simulation is only as good as its assumptions, so these are stated openly.
 
 ## 👋 About me
 
-**Vaibhav Thakur** · BS Economics, IISER Bhopal
+**Vaibhav Thakur** · BS (Major: Economics, Minor: Mathematics, IISER Bhopal
 
 Interested in quantitative modelling and economics (empirics and theory).
 
@@ -191,3 +191,9 @@ Interested in quantitative modelling and economics (empirics and theory).
 <sub>If you found this interesting, a ⭐ on the repository is very welcome.</sub>
 
 </div>
+
+---
+
+## ⚖️ License
+
+This project is licensed under the MIT License.
