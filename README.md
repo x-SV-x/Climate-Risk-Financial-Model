@@ -88,16 +88,29 @@ My answer, tested with a computer simulation of 10,000 firms: they go to **shado
 
 The simulation has **four phases**. Think of it as building a small artificial economy, hitting it with a flood, and watching what lenders and borrowers do.
 
-```mermaid
+
 flowchart LR
-    A["Phase 1<br/>Build 10,000<br/>synthetic firms"] --> B["Phase 2<br/>Flood hits;<br/>banks reprice and<br/>reject weak firms"]
-    B --> C["Phase 3<br/>Rejected firms<br/>borrow from NBFCs<br/>at 12.5%"]
-    C --> D["Phase 4<br/>Aggregate and<br/>visualise"]
-    style A fill:#dbeafe,stroke:#2563eb,color:#111
-    style B fill:#fef3c7,stroke:#d97706,color:#111
-    style C fill:#fee2e2,stroke:#dc2626,color:#111
-    style D fill:#dcfce7,stroke:#16a34a,color:#111
-```
+    A(["<b>PHASE 01</b><br/>Synthetic Economy<br/><br/>Generate 10,000<br/>synthetic firms"])
+    B(["<b>PHASE 02</b><br/>Climate Shock<br/><br/>Flood exposure<br/>Bank repricing<br/>Credit rejection"])
+    C(["<b>PHASE 03</b><br/>Shadow Banking<br/><br/>Rejected firms<br/>Shift to NBFCs<br/>Borrowing rate: 12.5%"])
+    D(["<b>PHASE 04</b><br/>Impact Assessment<br/><br/>Aggregate outcomes<br/>Measure spillovers<br/>Visualise results"])
+
+    A --> B
+    B -->|Credit rationing| C
+    C --> D
+
+    classDef phase1 fill:#EFF6FF,stroke:#3B82F6,color:#1E3A8A,stroke-width:2px
+    classDef phase2 fill:#FFF7ED,stroke:#F59E0B,color:#9A3412,stroke-width:2px
+    classDef phase3 fill:#FDF2F8,stroke:#DB2777,color:#831843,stroke-width:2px
+    classDef phase4 fill:#ECFDF5,stroke:#10B981,color:#065F46,stroke-width:2px
+
+    class A phase1
+    class B phase2
+    class C phase3
+    class D phase4
+
+    linkStyle default stroke:#64748B,stroke-width:2.5px
+
 
 | Phase | What happens | Key choices |
 |---|---|---|
@@ -107,33 +120,6 @@ flowchart LR
 | **4. Visualisation** | Roll firm-level outcomes up to economy-wide totals and plot them. | Bar chart, pie chart, kernel density estimate (Gaussian kernel, Scott's bandwidth) |
 
 **The one metric to know.** The *Interest Coverage Ratio* (ICR) asks: **how many times over can a firm's operating profit pay its interest bill?** An ICR of 3 means a comfortable cushion; an ICR below 1 means the firm cannot even pay its interest.
-
----
-
-## 🧮 The maths in one minute
-
-*For readers who like equations. Everyone else can skip to the next section.*
-
-Each firm *i* has revenue $R_i$, EBITDA margin $m_i$, and debt $D_i = d_i R_i$ at rate $r$. Its **interest coverage** is
-
-$$\mathrm{ICR}_i=\frac{\text{EBITDA}_i}{\text{Interest}_i}=\frac{m_i R_i}{r\,d_i R_i}=\frac{m_i}{r\,d_i}$$
-
-Revenue cancels out, so coverage depends only on **margin and leverage**.
-
-A flood with vulnerability score $V_i$ destroys a fraction $s_i = 0.35\,V_i/100$ of earnings, and the bank's new rate is $r_i$ (8.5%, or 9.0% if $V_i>50$). After the shock,
-
-$$\mathrm{ICR}^{S}_i=\mathrm{ICR}_i\cdot\underbrace{\frac{(1-s_i)\,r}{r_i}}_{\varphi_i}$$
-
-The bank renews only if $\mathrm{ICR}^{S}_i \ge 1.5$, which is the same as a **cut-off on the pre-flood ICR** that rises from about 1.5 for the safest firms to about 2.4 for the most exposed. A rejected firm then pays the NBFC rate $r_N = 12.5\%$:
-
-$$\mathrm{ICR}^{F}_i=\mathrm{ICR}^{S}_i\cdot\frac{r_i}{r_N},\qquad \text{default if } \mathrm{ICR}^{F}_i<1$$
-
-**Why 97.8% default.** The bank rejects firms whose coverage is below about 1.5 to 2.4. The NBFC rate then multiplies their interest bill by about 1.4 to 1.5 times, and a firm survives only if its coverage was already inside a very narrow window (about 2 to 7% of the cut-off). Almost nobody lands in that window.
-
-<div align="center">
-<img src="assets/thresholds.png" alt="Bank approval and NBFC survival thresholds against flood vulnerability" width="70%"/>
-<br/><sub>Analytic view of the two thresholds against flood vulnerability, derived from the model's own rules.</sub>
-</div>
 
 ---
 
