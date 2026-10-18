@@ -185,8 +185,8 @@ A simulation is only as good as its assumptions, so these are stated openly.
 
 Interested in quantitative modelling and economics (empirics and theory).
 
-[![Email](https://img.shields.io/badge/Email-Get%20in%20touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:YOUR-EMAIL)
-[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/YOUR-USERNAME)
+[![Email](https://img.shields.io/badge/Email-Get%20in%20touch-EA4335?style=for-the-badge&logo=gmail&logoColor=white)](mailto:thakurvaibhav964@gmail.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/x-SV-x)
 
 <sub>If you found this interesting, a ⭐ on the repository is very welcome.</sub>
 
