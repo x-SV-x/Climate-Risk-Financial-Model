@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/banner.svg" alt="Climate Risk Financial Model: The Shadow Banking Spillover Effect" width="100%"/>
+<h1 align="center">Simulating Climate Risk Migration: The Shadow Banking Spillover Effect</h1>
 
 <br/>
 
@@ -9,10 +9,10 @@
 [![pandas](https://img.shields.io/badge/pandas-150458?style=for-the-badge&logo=pandas&logoColor=white)](https://pandas.pydata.org/)
 [![Matplotlib](https://img.shields.io/badge/Matplotlib-11557c?style=for-the-badge)](https://matplotlib.org/)
 [![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)](https://jupyter.org/)
-![Method](https://img.shields.io/badge/Method-Monte%20Carlo%20Simulation-7c3aed?style=for-the-badge)
+![Method](https://img.shields.io/badge/Method-Statistical%20Simulation-7c3aed?style=for-the-badge)
 ![Topic](https://img.shields.io/badge/Topic-Climate%20Finance-059669?style=for-the-badge)
 
-**[The idea](#-the-idea-in-plain-english)** ·
+**[The idea](#-the-idea)** ·
 **[Results](#-results)** ·
 **[How it works](#-how-it-works)** ·
 **[The maths](#-the-maths-in-one-minute)** ·
@@ -24,9 +24,9 @@
 
 ---
 
-## 🌊 The idea, in plain English
+## 🌊 The idea
 
-> **If you squeeze a balloon in one place, the air does not disappear. It goes somewhere else.**
+> **Climate Risk regulations in banking do not eliminate the overall macroecnomic systemic climate risk. The risk just migrates to somewhere else.**
 
 Climate change is now a banking problem. Floods and storms damage businesses, and a damaged business may not repay its loan. Regulators around the world therefore push banks to measure climate risk carefully and to lend less to firms that have become too risky.
 
