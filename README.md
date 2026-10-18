@@ -37,9 +37,10 @@ That sounds like exactly the right thing to do. This project asks a question tha
 My answer, tested with a computer simulation of 10,000 firms: they go to **shadow banks** (lightly regulated lenders called NBFCs) that charge much higher interest. Many of them then fail. The regulated banks look safer, but **the risk was moved, not removed.**
 
 <div align="center">
-<img src="assets/kpi.svg" alt="Key numbers: 10,000 firms, 41% rejected, 97.8% of those default, +400 bp premium" width="100%"/>
+  <img src="Images/Climate_Risk.png"
+       alt="Climate Risk Financial Model"
+       width="100%">
 </div>
-
 ---
 
 ## 📌 At a glance
