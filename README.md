@@ -14,7 +14,7 @@
 
 **[The idea](#-the-idea)** ·
 **[Results](#-results)** ·
-**[How it works](#-how-it-works)** ·
+**[How it works](#how-it-works)** ·
 **[Skills](#-skills-demonstrated)** ·
 **[Run it](#-run-it-yourself)** ·
 **[Limitations](#-honest-limitations)**
@@ -82,7 +82,7 @@ My answer, tested with a computer simulation of 10,000 firms: they go to **shado
 > **Why this matters for policy:** a climate stress test that only looks at regulated banks can report "risk reduced" when, for the economy as a whole, risk has simply moved somewhere nobody is watching.
 
 ---
-
+<a id="how-it-works"></a>
 ## ⚙️ How it works
 
 The simulation has **four phases**. Think of it as building a small artificial economy, hitting it with a flood, and watching what lenders and borrowers do.
