@@ -75,7 +75,7 @@ My answer, tested with a computer simulation of 10,000 firms: they go to **shado
 <tr>
 <td width="33%" align="center"><b>1. Credit moves from banks to shadow banks</b><br/><img src="assets/plot1_credit_migration.png" alt="Loan portfolio before and after the flood"/></td>
 <td width="33%" align="center"><b>2. Most migrated firms default</b><br/><img src="assets/plot2_shadow_bank_outcomes.png" alt="Survival and default in the NBFC portfolio"/></td>
-<td width="33%" align="center"><b>3. The interest burden gets heavier</b><br/><img src="assets/plot3_interest_burden_density.png" alt="Density of interest burden before and after the shock"/></td>
+<td width="33%" align="center"><b>3. The interest burden gets heavier (kde- kernel density estimation plot)</b><br/><img src="assets/plot3_interest_burden_density.png" alt="Density of interest burden before and after the shock"/></td>
 </tr>
 </table>
 
